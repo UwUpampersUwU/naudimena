@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<div style="background-image: url(https://pbs.twimg.com/media/E1MPBF7XIAEq_4N.jpg);height: 500px; width:1000px;">
+				<img src="1.png" class="venti" style="transition:  1s;">
+	<p class="text" style="display: none; position: absolute; top: 150px; left: 100px; color: #d2feff;">блин я опять напился и потерял все вещи найди пожалуйста</p>
+			<button class="button" style="display: none; position: absolute; top: 300px; left: 300px; color: #08393c;">Начать игру</button>
+	<p class="text1" style="display: none; position: absolute; top: 200px; left: 200px; color: #cfd05a;">окей</p>
+					<img src="4.png" class="bog"style="display: none; height: 100px;width: 50px; position: absolute; left: 10px;top: 50px;">
+					<img src="2.png" class="luk" style="display: none;height: 50px;width: 50px; position: absolute;top: 250px; right: 390px;">
+					<img src="3.png" class="vino" style="display: none;height: 100px;width: 20px; position: absolute;top: 300px; left: 650px;">
+					<img src="5.png" class="ventilator"style="display: none; height: 100px;width: 150px; position: absolute;top: 410px; left: 1px;">
+	<h1 style="color: white;">Очки: <span class="showScore" style="font-size: 20px;"></span></h1>
+<p class="text2" style="display: none; position: absolute; top: 200px; left: 200px; color: #cfd05a;">Венти зачем тебе вино?</p>
+<p class="text3" style="display: none; position: absolute; top: 250px; left: 100px; color: #d2feff;">Ну мало ли что!</p>
+</div>
+	<script type="text/javascript">
+		document.querySelector(".venti").onclick = function(){
+			document.querySelector(".venti").style.marginLeft = "500px"
+			document.querySelector(".text").style.display = "block"
+		}
+		document.querySelector(".text").onclick = function(){
+			document.querySelector(".text1").style.display = "block"
+		}
+		document.querySelector(".text1").onclick = function(){
+			document.querySelector(".button").style.display = "block"
+		document.querySelector(".button").onclick = function(){
+				document.querySelector(".button").style.display = "none"
+				document.querySelector(".venti").style.display = "none"
+				document.querySelector(".text1").style.display = "none"
+				document.querySelector(".text").style.display = "none"
+				document.querySelector(".luk").style.display = "block"
+				document.querySelector(".vino").style.display = "block"
+				document.querySelector(".ventilator").style.display = "block"
+				document.querySelector(".bog").style.display = "block"
+		}
+		}
+        let number = 0;
+			document.querySelector(".showScore").innerHTML= number;
+			document.querySelector(".luk").onclick = function(){
+			number = number + 1;
+			document.querySelector(".showScore").innerHTML= number;
+			document.querySelector(".luk").style.display = "none"
+		}
+			document.querySelector(".showScore").innerHTML= number;
+			document.querySelector(".vino").onclick = function(){
+			number = number + 1;
+			document.querySelector(".showScore").innerHTML= number;
+			document.querySelector(".vino").style.display = "none"
+		}
+			document.querySelector(".showScore").innerHTML= number;
+			document.querySelector(".ventilator").onclick = function(){
+			number = number + 1;
+			document.querySelector(".showScore").innerHTML= number;
+			document.querySelector(".ventilator").style.display = "none"
+		}
+			document.querySelector(".showScore").innerHTML= number;
+			document.querySelector(".bog").onclick = function(){
+			number = number + 1;
+			document.querySelector(".showScore").innerHTML= number;
+			document.querySelector(".bog").style.display = "none"
+		}
+		document.querySelector(".vino").onclick = function(){
+			document.querySelector(".text2").style.display = "block"
+		}
+		document.querySelector(".text2").onclick = function(){
+			document.querySelector(".text3").style.display = "block"
+		}
+		document.querySelector(".text3").onclick = function(){
+				document.querySelector(".text2").style.display = "none"
+				document.querySelector(".text3").style.display = "none"
+				number = number + 1;
+				document.querySelector(".showScore").innerHTML= number;
+				document.querySelector(".vino").style.display = "none"
+		}
+	</script>
+</body>
+</html>
